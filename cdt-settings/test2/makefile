@@ -10,3 +10,6 @@ test2.o : test2.cpp
 
 test2 : main.o test2.o
 	g++ main.o test2.o -o test2
+
+clean:
+	-rm main.o test2.o test2

@@ -27,15 +27,13 @@ the indexer can not resolve properly includes and #if...#endif sections.
 
 CDT has a built-in GCC parser that can infer the options from the make output, if the compile commands are printed (for android this can be done by giving an additional `showcommands` target on make).
 
-This also means the build has to be performed from within eclipse, but eclipse builds each
-project separately.
+This also means the build has to be performed from within eclipse,
+but eclipse builds each project separately and apparently
+**the built-in parser only applies discovered settings to files of the project that runs the build**.
 
 Needs to be investigated more
 
-## Extension Point: org.eclipse.cdt.core.externalSettingsProvider
+## Extension Point: org.eclipse.cdt.core.LanguageSettingsProvider
 
-This extension point allows to define a provider that can contribute macros and include paths
-to the configuration, but seems to operate at project level only.
-
-Needs to be investigated more.
+Needs to be investigated more, there are threads on the cdt-dev mailing list.
 
